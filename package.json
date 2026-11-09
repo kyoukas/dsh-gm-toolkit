@@ -1,0 +1,63 @@
+{
+  "name": "dsh-gm-toolkit",
+  "version": "0.5.4",
+  "description": "Game modding toolkit for DeepSeek Harness: an on-demand \"save editor\" agent preset (fingertips scanning, save read/write, Unity/.NET IL disassembly and equal-length patches) plus a save-editor panel. The tools mount only in sessions created from that entry, so ordinary sessions pay zero tokens.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "client.js",
+    "index.js",
+    "tools.js",
+    "src",
+    "!src/*.bak*",
+    "!src/*.orig-*",
+    "patches",
+    "scripts",
+    "!scripts/*.bak*",
+    "!scripts/*.orig-*",
+    "!scripts/__pycache__/**",
+    "skills",
+    "presets",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "game",
+    "save-editor",
+    "modding",
+    "unity",
+    "il-patch",
+    "protobuf",
+    "messagepack",
+    "python"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs",
+    "test:routes": "node test/routes-smoke.mjs",
+    "test:all": "node test/smoke.mjs && node test/routes-smoke.mjs"
+  }
+}

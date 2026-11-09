@@ -1,0 +1,18 @@
+# 依赖
+node_modules/
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 编辑/调试留下的备份（发布包里也已排除，见 package.json 的 files）
+*.bak
+*.bak[0-9]*
+*.orig-*
+
+# 收起来的旧脚本（需要留档就把它删掉，让 git 跟踪它）
+_attic/
+
+# 系统垃圾
+.DS_Store
+Thumbs.db

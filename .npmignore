@@ -1,0 +1,9 @@
+# 发布时排除开发期产物（package.json 的 files 白名单之外再兜一层）
+**/__pycache__/
+**/*.bak
+**/*.bak1
+**/*.bak2
+**/*.bak3
+**/*.orig-*
+docs/
+test/
